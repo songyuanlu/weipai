@@ -1,0 +1,71 @@
+/* 头部公共按钮 */
+.gui-i {
+	background-image: url('@{sprite-img}/global/back.png');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 23px;
+	display: block;
+	position: relative;
+	top: 6px;
+}
+
+//蓝绿按钮
+.bt_withdraw {
+	width: 90%;
+	margin: 10% 5% 0 5%;
+	line-height: 40px;
+	color: @color-green;
+	background-color: @color-graygreen;
+	.border-radius(3px);
+	border: 0;
+	font-size: 14px;
+
+	&.group {
+		margin: 5%;
+	}
+
+	&.bottom {
+		margin: 5%;
+	}
+
+	&.gray {
+		color: #FFF;
+		background-color: @color-base;
+	}
+
+}
+
+//红色按钮
+.gui-btn-red {
+	padding: 5px 10px;
+	color: @color-red;
+	.border-radius(3px);
+	border: 1px solid @color-red;
+	background: transparent;
+	font-size: 12px;
+
+	&.bottom {
+		position: absolute;
+		top: 11px;
+		right: 15px;
+	}
+
+	&.green {
+		color: #54a001;
+		border: 1px solid #54a001;
+	}
+
+}
+
+//同意协议
+.gui-accept {
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	line-height: 55px;
+
+	em {
+		color: @color-red;
+	}
+
+}

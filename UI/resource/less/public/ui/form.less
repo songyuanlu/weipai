@@ -1,0 +1,411 @@
+/*公用表单*/
+.gui-form {
+	background: @color-graygreen;
+	width: 100%;
+
+	ul {
+		width: 100%;
+		color: #FFF;
+
+		>li {
+			margin: 0 12px;
+			padding: 9px 0;
+			overflow: hidden;
+			border-bottom: 1px solid @color-base;
+
+			h3 {
+				height: 100%;
+				width: 52%;
+				float: left;
+
+				i {
+					display: block;
+					height: 40px;
+					width: 40px;
+					.border-radius(50%);
+					float: left;
+
+					img {
+						width: 100%;
+						height: 100%;
+						.border-radius(50%);
+					}
+
+				}
+
+				div {
+					float: left;
+					font: 14px/22px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+					margin-left: 9px;
+
+					.time {
+						color: @color-base;
+						font-size: 12px;
+					}
+
+				}
+
+			}
+
+			div {
+				float: right;
+
+				&.take_part_in {
+					margin-right: 25px;
+					line-height: 64px;
+					height: 40px;
+					overflow: hidden;
+
+					em {
+						color: @color-red;
+					}
+
+				}
+
+				&.like-wrap {
+					margin-right:13px;
+				    text-align: center;
+
+					i {
+						width:20px;
+				    height:19px;
+				    margin:4px auto 0;
+				    display:block;
+					}
+
+				}
+
+			}
+
+			&.title {
+				h2 {
+					line-height: 36px;
+					font-size: 18px;
+				}
+
+				.menu {
+					width: 100%;
+
+					li {
+						margin: 0 25px 0 0;
+						padding: 0;
+						border-bottom: 0;
+						float: left;
+
+						span {
+							display: inline-block;
+							background-image: url('@{sprite-img}/label_white/fashion_white.png');
+							background-repeat: no-repeat;
+							position: relative;
+							top: 3px;
+							margin-right: 4px;
+							width: 17px;
+							height: 16px;
+							background-size: contain;
+
+							&.sport {
+								width: 16px;
+								background-image: url('@{sprite-img}/label_white/sport_white.png');
+							}
+
+							&.art {
+								width: 14px;
+								background-image: url('@{sprite-img}/label_white/pen_white.png');
+							}
+
+							&.music {
+								background-image: url('@{sprite-img}/label_white/music_white.png');
+								width: 16px;
+								height: 20px;
+							}
+
+							&.travel {
+								background-image: url('@{sprite-img}/label_white/travel_white.png');
+								width: 16px;
+								height: 10px;
+							}
+
+							&.hand_make {
+								background-image: url('@{sprite-img}/label_white/hand_make_white.png');
+								width: 16px;
+								height: 22px;
+							}
+
+							&.photo {
+								background-image: url('@{sprite-img}/label_white/photo_white.png');
+								width: 16px;
+								height: 11px;
+							}
+
+							&.cook {
+								background-image: url('@{sprite-img}/label_white/cook_white.png');
+								width: 16px;
+							}
+
+							&.wire {
+								background-image: url('@{sprite-img}/label_white/wire_white.png');
+								width: 16px;
+							}
+
+							&.read {
+								background-image: url('@{sprite-img}/label_white/read_white.png');
+								width: 11px;
+								height: 16px;
+							}
+
+							&.game {
+								background-image: url('@{sprite-img}/label_white/game_white.png');
+								width: 16px;
+								height: 14px;
+							}
+
+							&.street {
+								background-image: url('@{sprite-img}/label_white/street_white.png');
+								width: 16px;
+								height: 15px;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	// 菜单
+	.content {
+		line-height: 33px;
+		font-size: 14px;
+
+		.comment {
+			width: 100%;
+			padding: 12px;
+
+			.pic_ul {
+				margin: 5px 10px 0 50px;
+
+				.pic_list {
+					overflow: hidden;
+					width: 100%;
+
+					>li {
+						float: left;
+						width: 25%;
+						height: 21vw;
+						padding: 1.5px 0;
+
+						&:last-child{
+							height: 0;
+						}
+
+						.pic_a {
+							padding: 0 3px;
+							.border-radius(0);
+							width: 100%;
+							height: 100%;
+
+							>img {
+								width: 100%;
+								height: 100%;
+								.border-radius(0);
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+			li {
+				margin: 0;
+				border: 0;
+
+				a {
+					display: block;
+					height: 40px;
+					width: 40px;
+					.border-radius(50%);
+					float: left;
+
+					img {
+						width: 100%;
+						height: 100%;
+						.border-radius(50%);
+					}
+
+				}
+
+				div {
+					float: left;
+					margin-left: 10px;
+
+					p {
+						line-height: 18px;
+
+						&.time {
+							color: @color-base;
+							font-size: 12px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.nav {
+			width: 115px;
+			margin: auto;
+
+			a {
+				display: inline-block;
+				width: 45%;
+				text-align: center;
+				color: @color-green;
+
+				&.current {
+					color: @color-red;
+					border-bottom: 3px solid  @color-red;
+				}
+
+			}
+
+		}
+
+		.detail_ctn {
+			padding: 14px 15px;
+			line-height: 22px;
+			color: #FFF;
+
+			p {
+				padding-left: 10px;
+			}
+
+			.map {
+				margin-top: 10px;
+				padding-bottom: 5px;
+				width: 100%;
+				border-bottom: 1px solid @color-base;
+
+				div {
+					padding: 0 10px;
+
+					img {
+						width: 100%;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/*活动详情底部:购买*/
+.gui-order {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 4px 10px 0;
+	height: 50px;
+	width: 100%;
+	overflow: hidden;
+	z-index: 399;
+	color: #FFF;
+
+	.price {
+		width: 145px;
+		color: #FFF;
+		font-size: 14px;
+		line-height: 44px;
+		float: left;
+
+		em {
+			color: @color-red;
+			font-size: 18px;
+		}
+
+	}
+
+	.buy {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		float: right;
+		background: @color-red;
+		.border-radius(50%);
+		text-align: center;
+		position: relative;
+		top: 2px;
+		margin-left: 29px;
+	}
+
+	.num {
+		float: right;
+		height: 48px;
+		line-height: 48px;
+
+		p {
+			display: inline-block;
+			padding: 0 2px;
+			text-align: center;
+		}
+
+		a {
+			width: 25px;
+			height: 22px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			background-image: url('../img/sprites/global/plus.png');
+
+			&.reduce {
+				background-image: url('../img/sprites/global/reduce.png');
+			}
+
+		}
+
+	}
+
+}
+
+.float_clear {
+	clear: both;
+	height: 0;
+}
+
+//品牌故事
+.gui-story {
+	width: 100%;
+	padding: 18px;
+	background: #FFF;
+	margin-top: 6px;
+
+	&.no_margin {
+		margin-top: 0;
+	}
+
+	textarea {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	img {
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+	}
+
+}

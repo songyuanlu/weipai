@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>微派</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/global.css">
+</head>
+<body>
+
+	<!-- 底部 start -->  
+	<footer class="gui-footer">
+		<a href="javascript:;"><i class="icons-find"></i>发现</a>
+		<a href="javascript:;"><i class="icons-msg"></i>消息</a>
+		<div class="open-more"><div class="button" id="button"><span></span></div></div>
+		<a href="javascript:;"><i class="icons-activity"></i>活动</a>
+		<a href="javascript:;"><i class="icons-my"></i>我的</a>
+		<div class="pop-open-more">
+			<div class="gui-open-more cf">
+				<div class="list">
+					<a href="javascript:;"><i class="icons-mood"></i><p>微派心情</p></a>
+				</div>
+				<div class="list">
+					<a href="javascript:;"><i class="icons-activity"></i><p>发布活动</p></a>
+				</div>
+				<div class="list">
+					<a href="javascript:;"><i class="icons-group"></i><p>成立群组</p></a>
+				</div>
+				<div class="list">
+					<a href="javascript:;"><i class="icons-topic"></i><p>发布话题</p></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- 底部 end --> 
+</body>
+<script>
+	var type = false
+	document.getElementById('button').addEventListener('touchend',function(e){
+		if (type == false) {
+			document.getElementById('button').className = 'button on'
+			type = true;
+		}else{
+			document.getElementById('button').className = 'button'
+			type = false
+		}
+		
+	},false);
+</script>
+</html>

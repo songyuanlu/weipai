@@ -1,0 +1,827 @@
+/* 公用表单 */
+.gui-ul {
+	background: #FFF;
+
+	.head{
+		width:100%;
+	    color:#0aedc3;
+	    padding:10px 15px 5px;
+
+		p{
+			padding-left: 10px;
+			border-left: 2px solid @color-green;
+		}
+	}
+
+	&.ul_margin {
+		background-color: #d1eded;
+
+		li {
+			margin-top: 6px;
+			border-bottom: 0;
+			background-color: #FFF;
+			margin-left: 0;
+			padding-left: 15px;
+			color: @color-gray;
+
+			.title {
+				height: auto;
+				padding-top: 0;
+				font: 16px/49px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+
+				span {
+					float: right;
+					font-size: 12px;
+				}
+				img {
+					display: inline-block;
+					border: 0;
+					width: 21px;
+					height: 21px;
+					position: relative;
+					top: 4px;
+					margin-right: 13px;
+				}
+				input {
+					float: right;
+					border: 0;
+					height: 50px;
+					text-align: right;
+					.appearance();
+					.placeholder(@color: @color-base);
+				}
+			}
+		}
+	}
+
+	li {
+		.type-wrap {
+		    float:right;
+		    font-size:12px;
+		}
+
+		.type-wrap span.type {
+		    margin-right: 8px;
+		}
+		.ctn {
+		    line-height: 39px;
+		}
+	}
+
+	>li {
+		margin-left: 15px;
+		padding-right: 15px;
+		min-height: 50px;
+		border-bottom: 1px solid #cccccc;
+		font: 14px/49px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+		color: #666666;
+		position: relative;
+
+		&:last-child {
+			border-bottom: none;
+		}
+		&.gray {
+			// padding-left: 2px;
+			// color: @color-gray;
+
+			&.font {
+				font: 12px/20px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+
+				.map {
+					width: 100%;
+				}
+			}
+			.arrow {
+				width: 8px;
+				height: 16px;
+				margin: 25px 0 0 5px;
+				float: right;
+				background-image: url("@{sprite-img}/global/arrow.png");
+			}
+			.choose {
+				font-size: 12px;
+				color: @color-base;
+				position: absolute;
+				top: -13px;
+			}
+			.red{
+				color: @color-red;
+			}
+		}
+		&.face {
+			padding: 10px 15px 10px 5px;
+			color: @color-gray;
+
+			table {
+				width: 100%;
+
+				.head {
+					width: 80%;
+					text-align: right;
+
+					div {
+						background-color: @color-base;
+						width: 70px;
+						height: 70px;
+						.border-radius(50%);
+						float: right;
+					}
+					img {
+						vertical-align: middle;
+						width: 70px;
+						height: 70px;
+						.border-radius(50%);
+					}
+				}
+			}
+		}
+		input {
+			float:right;
+		    border:0;
+		    text-align:right;
+		    height: 49px;
+		    padding: 5px 0;
+
+			&.width {
+				width: 83%;
+			}
+		}
+		.link {
+			&:after {
+				content: '';
+				position: absolute;
+				right: 15px;
+				margin-top: -10px;
+				width: 8px;
+				height: 16px;
+				background: url('../img/sprites/global/arrow.png') no-repeat;
+				.background-size(@width: 100%;
+				@height: auto);
+			}
+		}
+		.title {
+			height:35px;
+		    font-size:14px;
+		    float:left;
+
+			&.no-float {
+				float: none;
+				height: auto;
+			}
+			&.gray {
+				color: @color-gray;
+			}
+			&:after {
+				content: '.';
+				display: block;
+				clear: both;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+		}
+	}
+}
+// 订单列表 
+.gui-order-list {
+	width: 100%;
+
+	li {
+		width: 100%;
+		background-color: #FFF;
+		padding: 12px;
+		margin-top: 6px;
+		overflow: hidden;
+
+		.img {
+			width: 100px;
+			height: 100px;
+			margin-right: 7px;
+			float: left;
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.price {
+			float: right;
+			width: 100px;
+			overflow: hidden;
+			font: 12px/24px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+			color: @color-gray;
+			border-left: 1px solid @color-base;
+			text-align: center;
+
+			a {
+				color: @color-gray;
+				margin-top: 20px;
+				display: block;
+			}
+			button {
+				.appearance();
+				width: 50px;
+				line-height: 20px;
+				color: #54a001;
+				.border-radius(3px);
+				border: 1px solid #54a001;
+				background-color: transparent;
+				margin-top: 20px;
+
+				&.red {
+					color: @color-red;
+					border: 1px solid @color-red;
+				}
+			}
+			.num {
+				color: #54a001;
+				font-size: 14px;
+				margin-top: 8px;
+
+				&.num_red {
+					color: @color-red;
+				}
+			}
+		}
+		.info {
+			color: @color-base;
+			font-size: 12px;
+
+			p:last-child {
+				margin-top: 20px;
+			}
+			.title {
+				white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow:ellipsis;
+			    color:#232c2c;
+			    font-size:14px;
+			    margin-bottom:3px;
+			}
+		}
+	}
+}
+//票券列表
+.gui-ticket-list {
+	width: 100%;
+
+	>li {
+		width: 100%;
+		padding: 10px 35px 0px;
+		background: #FFF;
+		margin-bottom: 6px;
+		overflow: hidden;
+
+		p {
+			color: @color-gray;
+
+			&.number {
+				color: @color-base;
+				line-height: 26px;
+			}
+			em {
+				color: #54a001;
+			}
+		}
+		.code {
+			width: 90px;
+			height: 90px;
+			// margin-right: 33px;
+			float: left;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.info {
+			float: left;
+
+			p {
+				color: @color-base;
+			}
+		}
+	}
+}
+//wepar 列表
+.gui-wepar {
+	background: #FFF;
+	width: 100%;
+	padding: 0 10px;
+	color: @color-gray;
+
+	div {
+		&.title {
+			border-top: 1px solid @color-base;
+			font-size: 14px;
+			line-height: 28px;
+			.ellipsis();
+		}
+		&.detail {
+			font-size: 12px;
+			line-height: 20px;
+			.ellipsis();
+
+			em {
+				&:first-child {
+					margin-right: 10px;
+				}
+			}
+		}
+		&.participant {
+			width: 100%;
+			margin-top: 5px;
+			padding-bottom: 7px;
+
+			i {
+				width: 40px;
+				height: 40px;
+				.border-radius(50%);
+				line-height: 40px;
+				float: right;
+				margin-right: 10px;
+
+				img {
+					width: 40px;
+					height: 40px;
+					.border-radius(50%);
+				}
+				p {
+					background-color: @color-gray;
+					color: @color-green;
+					text-align: center;
+					.border-radius(50%);
+				}
+			}
+		}
+		&.time {
+			text-align: right;
+			color: @color-base;
+			padding-right: 10px;
+			line-height: 24px;
+		}
+	}
+	.img {
+		width: 100%;
+		overflow: hidden;
+		margin: 0 -2px;
+
+		.thumbnail{
+		    position: relative;
+		    width:88px;
+		    height: 88px;
+		    overflow:hidden;
+
+		    img{
+			    position: relative;
+			    width:100%;
+			    height: 100%;
+
+			}
+		}
+
+		li {
+			width: 25%;
+			float: left;
+			position: relative;
+
+			&.after {
+				&:after {
+					content: '';
+					position: absolute;
+					right: 5px;
+					top: 5px;
+					width: 100%;
+					height: 100%;
+					background: url("@{img}/delete.png") top right no-repeat;
+				}
+			}
+		}
+		a {
+			margin:0 2px 4px;
+		    height: 75px;
+		    display:block;
+		    overflow:hidden;
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+/* 通知列表 */
+.gui-inform {
+	width: 100%;
+
+	li {
+		background-color: #FFF;
+		margin-top: 6px;
+		padding: 5px 10px 5px 0;
+		overflow: hidden;
+
+		table {
+			width: 100%;
+		}
+		.icon {
+			height: 40px;
+			width: 50px;
+			text-align: center;
+
+			img {
+				vertical-align: middle;
+			}
+		}
+		.detail {
+			overflow: hidden;
+			border-left: 1px solid #CCC;
+			padding-left: 10px;
+			font-size: 14px;
+			position: relative;
+
+			.head {
+				width: 40px;
+				height: 50px;
+				.border-radius(50%);
+				padding: 5px 0;
+
+				img {
+					width: 40px;
+					height: 40px;
+					.border-radius(50%);
+				}
+			}
+			.word {
+				padding: 5px 0;
+				display: block;
+				margin-left: 10px;
+
+				em {
+					color: @color-gray;
+
+					&.refund {
+						font-size: 12px;
+						color: @color-base;
+					}
+				}
+			}
+			.reason {
+				font-size: 12px;
+				line-height: 28px;
+
+				em {
+					font-size: 14px;
+					color: @color-gray;
+				}
+			}
+			.button {
+				margin-top: 5px;
+				height: 25px;
+
+				&.ab {
+					position: absolute;
+					top: 2px;
+					right: 0px;
+				}
+				.green {
+					position: absolute;
+					right: 10px;
+					color: #54a001;
+					width: 50px;
+					line-height: 20px;
+					background: transparent;
+					border: 1px solid #54a001;
+					.border-radius(3px);
+
+					&.no_ab {
+						position: static;
+					}
+				}
+				.red {
+					position: absolute;
+					right: 70px;
+					color: @color-red;
+					width: 50px;
+					line-height: 20px;
+					background: transparent;
+					border: 1px solid @color-red;
+					.border-radius(3px);
+
+					&.no_ab {
+						position: static;
+					}
+				}
+			}
+		}
+	}
+}
+//我的添加-列表
+.gui-add {
+	width: 90px;
+	position: absolute;
+	right: 10px;
+	top: 35px;
+	background: #e9eaea;
+	.border-radius(3px);
+
+	img {
+		display: block;
+		width: 13px;
+		height: 7px;
+		position: absolute;
+		right: 60px;
+		top: -7px;
+	}
+	li {
+		line-height: 40px;
+		font-size: 14px;
+		text-align: center;
+
+		&:nth-child(2) {
+			border-bottom: 1px solid @color-base;
+		}
+	}
+}
+//添加工作经验-列表
+.gui-plus-ctn {
+	li {
+		margin-left: 70px;
+		border-bottom: 1px solid @color-base;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	table {
+		width: 100%;
+		color: @color-base;
+		font-size: 12px;
+	}
+	img {
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+	}
+	td {
+		&.right {
+			text-align: right;
+		}
+	}
+}
+//label列表
+.gui-label {
+	height: 25px;
+	margin: auto;
+	color: @color-base;
+	text-align: center;
+
+	&.no_height {
+		height: auto;
+		float: right;
+	}
+	&.right {
+		text-align: right;
+	}
+	ul {
+		display: inline-block;
+		overflow: hidden;
+	}
+	li {
+		float:left;
+	    margin-right:8px;
+	    font-size:12px;
+
+		&.line-h {
+			padding-top: 7px;
+
+			img {
+				height: 21px;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		img {
+			width: 14px;
+			height: 16px;
+			position: relative;
+			top: 4px;
+			margin-right: 2px;
+		}
+	}
+}
+//话题列表
+.gui-topic-list {
+	width: 100%;
+
+	li {
+		padding: 12px;
+		background: #FFF;
+		margin-top: 6px;
+	}
+	.head {
+		width: 100%;
+		overflow: hidden;
+
+		p {
+			float: left;
+			color: @color-base;
+			font-size: 12px;
+			width: auto;
+			margin: 0 10px;
+		}
+		i {
+			width: 25px;
+			height: 25px;
+			.border-radius(50%);
+			float: left;
+
+			img {
+				width: 25px;
+				height: 25px;
+				.border-radius(50%);
+			}
+		}
+	}
+	p {
+		width: 100%;
+		font-size: 14px;
+		color: @color-gray;
+		line-height: 24px;
+	}
+	.cha {
+		width: 18px;
+		height: 18px;
+		background-image: url("@{sprite-img}/global/cha.png");
+		background-repeat: no-repeat;
+		float: right;
+	}
+	table {
+		float: right;
+		margin-right: 15px;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+	i.arrow {
+	    width: 7px;
+	    height: 7px;
+	    position: relative;
+	    margin: auto;
+	    top: -12px;
+	    display: block;
+	    background-image:url("@{sprite-img}/arrow_gray.png")
+	}
+
+	i.comment {
+	    background-image:url("@{sprite-img}/global.png");
+	    background-position: 2px -247px
+	}
+}
+//群组成员列表
+.gui-menbers {
+	padding: 15px;
+	background: #FFF;
+	overflow: hidden;
+
+	&.margin {
+		margin-top: 6px;
+	}
+	div {
+		width: 100%;
+		margin-bottom: 5px;
+		overflow: hidden;
+
+		p {
+			float: right;
+			color: @color-gray;
+
+			&.left {
+				float: left;
+				font-size: 14px;
+			}
+			&.finish {
+				color: @color-red;
+			}
+		}
+	}
+	.menbers {
+		width: 100%;
+		overflow: hidden;
+		padding-top: 10px;
+		border-top: 1px solid @color-base;
+
+		li {
+			width: 33.3333%;
+			float: left;
+
+			p {
+				text-align: center;
+				margin: auto;
+				width: 70px;
+				height: 70px;
+				.border-radius(50%);
+
+				&.face_de {
+					position: relative;
+
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						.border-radius(50%);
+						background: rgba(0, 0, 0, 0.5) url("@{img}/delete.png") center center no-repeat;
+					}
+				}
+				&.creat {
+					width: 40px;
+					height: 40px;
+					background-color: @color-gray;
+					line-height: 40px;
+					font-size: 12px;
+					color: @color-green;
+				}
+				&.name {
+					color: @color-gray;
+					line-height: 28px;
+					font-size: 14px;
+					width: auto;
+					height: 40px;
+
+					span {
+						display: inline-block;
+						background-image: url("@{sprite-img}/global/male.png");
+						background-repeat: no-repeat;
+						width: 9px;
+						height: 11px;
+						margin-left: 2px;
+
+						&.female {
+							background-image: url("@{sprite-img}/global/female.png");
+							width: 7px;
+						}
+					}
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					.border-radius(50%);
+				}
+			}
+		}
+	}
+}
+
+//发现列表
+.gui-list-find{
+	width: 100%;
+
+	>li{
+		background: @color-gray;
+		margin-bottom: 6px;
+		.border-radius(5px);
+		.box-shadow(1px 2px 3px #98bab8); 
+	}
+
+	&.left{
+		width:50%;
+	    float:left;
+	    padding-top: 5px;
+	    padding-right:3px;
+	}
+
+	&.right{
+		width:50%;
+	    float:right;
+	    padding-top: 5px;
+	    padding-left:3px;
+	}
+
+	.gui-banner{
+		background: @color-gray;
+		.border-radius(5px);
+		overflow: hidden;
+	}
+
+	.tag{
+		position: absolute;
+		width: 100px;
+		left: -27px;
+		top: 15px;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		background: @color-green;
+		text-align: center;
+		color: @color-gray;
+	}
+
+	.label{
+		li{
+			margin-right: 10px;
+		}
+	}
+}

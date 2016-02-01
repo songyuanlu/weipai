@@ -1,0 +1,324 @@
+/* -- 搜索菜单 -- */
+
+/* 遮罩  start */
+.gui-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: @color-green;
+	z-index: 800;
+
+	&.mask_inform {
+		background: rgba(0, 0, 0, 0.5);
+		z-index:801;
+		color: @color-gray;
+	}
+
+	.cha {
+		width: 18px;
+		height: 18px;
+		background-image: url('@{sprite-img}/global/cha.png');
+		position: absolute;
+		right: 15px;
+		top: 14px;
+	}
+
+	.inform {
+		background-color: rgba(242, 244, 244, 0.9);
+		width: 90%;
+		margin: auto;
+		.border-radius(3px);
+		position: relative;
+		top: 25%;
+
+		h3 {
+			width: 100%;
+			font: 18px/60px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+			padding: 0 5%;
+			text-align: left;
+
+			&.fb_title {
+				font-size: 12px;
+				line-height: 28px;
+				color: @color-base;
+				padding-top: 37px;
+				margin-bottom: 0;
+			}
+
+			&.word {
+				font: 14px/22px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+			}
+
+		}
+
+		textarea {
+			margin: 0 5%;
+			width: 90%;
+			border: 0;
+			font-size: 14px;
+			padding: 12px;
+		}
+
+		.button {
+			width: 100%;
+			padding: 35px 20px 15px 56%;
+
+			button {
+				width: 45%;
+				height: 28px;
+				border: 0;
+				color: @color-gray;
+				padding: 0;
+				margin: 0;
+
+				&.red {
+					color: @color-red;
+				}
+
+			}
+
+		}
+
+	}
+
+	&.mask_green {
+		background: rgba(52, 63, 63, 0.9);
+		z-index: 301;
+	}
+
+	.cancel {
+		position: absolute;
+		background-image: url('@{sprite-img}/global/cancel.png');
+		width: 31px;
+		height: 31px;
+		right: 10px;
+		top: 10%;
+	}
+
+	.wait {
+		width: 100%;
+		height: 157px;
+		background-image: url('@{img}/wait@2x.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin-top: 20%;
+
+		&.finish {
+			background-image: url('@{img}/finish@2x.png');
+			height: 242px;
+		}
+
+		&.succeed {
+			background-image: url('@{img}/succeed@2x.png');
+			height: 257px;
+			margin-top: 5%;
+		}
+
+	}
+
+	h3 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 30px;
+		font: 18px/40px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+	}
+
+	button {
+		width: 80%;
+		font-size: 16px;
+		padding: 10px;
+		margin: 0 10%;
+		border: 1px solid @color-green;
+		background-color: transparent;
+		color: @color-green;
+		border-radius: 3px;
+
+		&.feedback {
+			width: 90%;
+			background: @color-gray;
+			margin: 7% 5% 5%;
+			border: 0;
+		}
+
+	}
+
+}
+
+/* 遮罩  end */
+.gui-filter {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(52, 63, 63, 0.9);
+	z-index: 801;
+
+	input{
+	    z-index: 810;
+	}
+
+	&.relative {
+		position: relative;
+	}
+
+	&.transparent {
+		background: transparent;
+	}
+
+	&.pg_reply {
+		width: 100%;
+	}
+
+	.list_ul {
+		width: 90%;
+		height: 40px;
+		overflow: hidden;
+		margin-left: 15px;
+		margin-top: 5px;
+
+		li {
+			width: 35px;
+			height: 35px;
+			float: left;
+			position: relative;
+			margin-right: 10px;
+
+			.delete {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 7.5px;
+				left: 7.5px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+		}
+
+	}
+
+	.input_search {
+		position: relative;
+		padding: 9px 0 0 15px;
+		width: 100%;
+
+		input {
+			width: 86%;
+			border: 1.5px solid @color-green;
+			color: @color-green;
+			padding: 8px;
+			border-radius: 3px;
+			.placeholder(@color: @color-green);
+			background: rgba(255, 255, 255, 0.2);
+
+			&.camera {
+				background: url("@{img}/camera.png") 97% center no-repeat rgba(255, 255, 255, 0.2);
+			}
+
+		}
+
+		span {
+			background-image: url('../img/sprites/global/discuss.png');
+			background-repeat: no-repeat;
+			display: inline-block;
+			width: 21px;
+			height: 19px;
+			position: absolute;
+			top: 16px;
+			right: 15px;
+			margin-left: 6px;
+
+			&.camera {
+				background: url("@{img}/camera.png") 97% center no-repeat rgba(255, 255, 255, 0.2);
+			}
+		}
+
+	}
+
+	.menu {
+		width: 100%;
+
+		>li {
+			width: 44%;
+			font: 14px/55px "Hiragino Sans GB W3", "Heiti SC", "Helvetica Neue", Helvetica;
+			text-align: center;
+			float: left;
+
+			a {
+				width: 50%;
+				height: 100%;
+				display: block;
+				margin: auto;
+				color: @color-green;
+
+				span {
+					display: inline-block;
+					background-image: url('@{sprite-img}/global/fashion.png');
+					background-repeat: no-repeat;
+					position: relative;
+					top: 3px;
+					margin-right: 4px;
+					width: 17px;
+					height: 16px;
+
+					&.sport {
+						background-image: url('@{sprite-img}/global/sport.png');
+					}
+
+					&.art {
+						background-image: url('@{sprite-img}/global/pen.png');
+					}
+
+					&.music {
+						background-image: url('@{sprite-img}/global/music.png');
+						height: 20px;
+					}
+
+					&.travel {
+						background-image: url('@{sprite-img}/global/travel.png');
+						height: 11px;
+					}
+
+					&.hand_make {
+						background-image: url('@{sprite-img}/global/hand_make.png');
+						height: 21px;
+					}
+
+					&.photo {
+						background-image: url('@{sprite-img}/global/photo.png');
+						height: 12px;
+					}
+
+					&.cook {
+						background-image: url('@{sprite-img}/global/cook.png');
+					}
+
+					&.wire {
+						background-image: url('@{sprite-img}/global/wire.png');
+					}
+
+					&.read {
+						background-image: url('@{sprite-img}/global/read.png');
+					}
+
+					&.game {
+						background-image: url('@{sprite-img}/global/game.png');
+						height: 14px;
+					}
+
+					&.street {
+						background-image: url('@{sprite-img}/global/street.png');
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

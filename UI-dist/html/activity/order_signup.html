@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单报名</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/global.css">
+</head>
+<body>
+	<!-- 头部 start -->
+	<header class="header">
+        <div class="left"><a><i class="gui-i back"></i></a></div>
+        <h2 class="title no_img">
+            <!-- <img class="logo" src="../../resource/img/sprites/global/pen.png"> -->报名信息
+        </h2>
+        <div class="right"><a>导入已有信息</a></div> 
+	</header>
+	<!-- 头部 end -->
+
+	<section class="body pg-pay no-ft">		
+		<ul ng-repeat="" class="gui-ul ul-first margin-top">
+			<div class="head"><p>第{{$index}}人信息</p></div>
+			<li ng-repeat="" class="gray">
+				<h3 class="title gray">姓名</h3>
+				<input type="text" placeholder="输入">
+			</li>
+			<li class="gray">
+				<h3 class="title gray">手机</h3>
+				<input type="text">
+			</li>
+			<li class="gray">
+				<h3 class="title gray">证件类型</h3>
+				<span class="arrow"></span>
+			</li>
+			<li class="gray">
+				<h3 class="title gray">证件号码</h3>
+				<input type="text">
+			</li>
+			<li class="gray">
+				<h3 class="title gray">年龄</h3>
+				<input type="text" placeholder="27">
+			</li>
+			<li class="gray">
+				<h3 class="title gray">鞋号</h3>
+				<input type="text" placeholder="39">
+			</li>
+		</ul>
+
+		<button class="bt_withdraw bottom">提交</button>
+	</section>
+</body>
+</html>

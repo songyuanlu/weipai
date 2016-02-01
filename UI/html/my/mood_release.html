@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>群组资料修改</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../../resource/css/global.css">
+</head>
+<body>
+
+	<!-- 头部 start -->
+	<header class="header">
+        <div class="left"><a><i class="gui-i back"></i></a></div>
+		<h2 class="title no_img">
+            微派心情
+        </h2>      
+	</header>
+	<!-- 头部 end -->
+	<section class="body pg-my-inform no-ft">
+		
+		<div class="gui-story no_margin">
+			<textarea placeholder="写下你的微派心情"></textarea>
+			<img src="../../resource/img/pic.png">
+		</div>
+		<div class="gui-wepar">
+			<ul class="img">
+				<li class="after">
+					<a href="">
+						<img src="../../resource/temp_img/activity_2.png" alt="">
+					</a>
+				</li>
+				<li class="after"><a href=""><img src="../../resource/temp_img/activity_2.png" alt=""></a></li>
+				<li class="after"><a href=""><img src="../../resource/temp_img/activity_2.png" alt=""></a></li>
+				<li class="after"><a href=""><img src="../../resource/temp_img/activity_2.png" alt=""></a></li>
+				<li class="float_clear"></li>
+			</ul>
+		</div>
+
+		<div class="gui-tab">
+			<p>是否允许其他小伙伴加入你的微派？申请加入需得到你的同意。</p>
+			<div class="choose">
+				<label><span style="margin-right:5px;">是</span><input value="1" type="radio" class="gui-radio " name="yes"></label>
+				<label><span style="margin-right:5px;">否</span><input value="0" type="radio" class="gui-radio" name="no"></label>
+			</div>
+		</div>
+
+		<ul class="gui-ul">
+			<li class="gray">
+				<p class="choose">以下为选填信息</p>
+				<h3 class="title gray">人数</h3>
+				<input type="text" placeholder="不限">
+			</li>
+			<li class="gray">
+				<h3 class="title gray">时间</h3>
+				<input class="width" type="text" placeholder="2015.10.1  18 : 33 - 2015.10.2  18 : 33">
+			</li>
+			<li class="gray font">
+				<h3 class="title gray">地点</h3>				
+				<input type="text" placeholder="输入详细地址">
+				<div class="gui-label right no_height">
+					<ul>
+						<li class="line-h">
+							<img src="../../resource/img/location@2x.png" alt="">深圳 南山
+						</li>
+						<li class="float_clear"></li>
+					</ul>
+				</div>
+				<div class="float_clear"></div>
+				<img class="map" src="../../resource/temp_img/map@2x.png">
+			</li>
+			<li>
+				<h3 class="title gray">@邀请</h3>
+			</li>
+		</ul>
+		<button class="bt_withdraw bottom">发布</button>
+	</section>
+</body>
+</html>
